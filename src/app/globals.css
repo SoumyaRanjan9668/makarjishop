@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-forest: #12372F;
+  --color-forest-deep: #0B2923;
+  --color-forest-light: #1A4D42;
+  --color-forest-subtle: #24574B;
+  
+  --color-ivory: #F5F2EA;
+  --color-ivory-light: #FAF8F3;
+  --color-ivory-dark: #EAE4D7;
+  
+  --color-terracotta: #B96F50;
+  --color-terracotta-hover: #A25B3E;
+  --color-terracotta-light: #CF866A;
+  --color-terracotta-muted: #EEDDD5;
+  
+  --color-sage: #DCE5DE;
+  --color-sage-light: #EDF3EE;
+  --color-sage-dark: #C2D1C6;
+  
+  --color-main-text: #252923;
+  --color-secondary-text: #777D75;
+  --color-border-subtle: #DDD7CA;
+  
+  --font-serif: "Cinzel", "Playfair Display", "Baskerville", "Georgia", serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-ivory);
+  color: var(--color-main-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background-color: var(--color-terracotta);
+  color: #FFFFFF;
+}
+
+/* Custom craftsmanship textured overlay */
+.texture-anvil-pattern {
+  background-color: var(--color-forest-deep);
+  background-image: radial-gradient(rgba(220, 229, 222, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
